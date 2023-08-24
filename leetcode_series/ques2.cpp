@@ -11,10 +11,9 @@ int main()
     {
         if (num & 1)
         {
-            count+=1;
+            count += 1;
         }
         num = num >> 1;
-        cout<< count<<endl;
+        cout << count << endl;
     }
-    
 }

@@ -26,7 +26,7 @@ int main()
             cout << start;
             start -= 1;
         }
-        cout<<endl;
+        cout << endl;
         i++;
     }
 }

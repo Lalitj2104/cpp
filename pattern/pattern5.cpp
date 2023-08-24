@@ -5,16 +5,17 @@ int main()
     int n, i = 1;
     cout << "enter the number";
     cin >> n;
-    int count=1;
-    while(i<=n){
-        int j=1;
-        while(j<=i){
-            cout<<count<<" ";
+    int count = 1;
+    while (i <= n)
+    {
+        int j = 1;
+        while (j <= i)
+        {
+            cout << count << " ";
             count++;
             j++;
         }
-        cout<<endl;
+        cout << endl;
         i++;
     }
-
 }

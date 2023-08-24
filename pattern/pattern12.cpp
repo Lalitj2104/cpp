@@ -10,7 +10,7 @@ int main()
         int j = 1;
         while (j <= n)
         {
-            char ch = 'A' + j-i +n;
+            char ch = 'A' + j - i + n;
             cout << ch;
             j++;
         }

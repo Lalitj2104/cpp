@@ -5,14 +5,15 @@ int main()
     int n, i = 1;
     cout << "enter the number";
     cin >> n;
-    while(i<=n){
-        int j=1;
-        while(j<=i){
-            cout<<i;
+    while (i <= n)
+    {
+        int j = 1;
+        while (j <= i)
+        {
+            cout << i;
             j++;
-
         }
-        cout<<endl;
+        cout << endl;
         i++;
     }
 }
