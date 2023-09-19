@@ -9,7 +9,8 @@ int main()
         cout << "Character" << endl;
         break;
     case 1:
-        cout << "integer" << endl ; break;
+        cout << "integer" << endl;
+        break;
     default:
         cout << "this is a default case" << endl;
     }
