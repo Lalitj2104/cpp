@@ -4,6 +4,9 @@
         "iostream": "cpp",
         "istream": "cpp",
         "ostream": "cpp",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "array": "cpp",
+        "initializer_list": "cpp",
+        "utility": "cpp"
     }
 }
