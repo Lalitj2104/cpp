@@ -22,7 +22,7 @@ int main(){
     for (int i = 0; i < size; i++)
     {
         cin >> arr[i];
-    }
+    }   
     int result=duplicate(arr,size);
     cout<<"Duplicate element in the given array is: "<<result<<endl;
 }
