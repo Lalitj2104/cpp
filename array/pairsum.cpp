@@ -18,7 +18,7 @@ int main(){
     for(int i=0;i<size;i++){
         cin>>arr[i];
     }
-    cout<<"Enter the sum:";    
+    cout<<"Enter the sum:";
     cin>>sum;
     pairSum(arr,size,sum);
 }
