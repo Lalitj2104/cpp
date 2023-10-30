@@ -42,6 +42,8 @@ int getPivot(int arr[],int size){
 }
 
 
+
+
 int main()
 {
     int size, arr[100];
