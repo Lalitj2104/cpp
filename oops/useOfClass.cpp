@@ -8,7 +8,7 @@ class person{
     void getdata(void);
     void display(void);
 };
-
+//fetching data
 void person::getdata(void){
     cout<<"Enter name: ";
     cin>>name;
@@ -16,7 +16,7 @@ void person::getdata(void){
     cin>> age;
 
 }
-
+//display
 void person:: display(void){
     cout<<"Name: "<<name<<endl;
     cout<< "age: "<<age<<endl;
