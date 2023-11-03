@@ -13,7 +13,7 @@ bool linearSearch(int arr[],int size,int key){
 
 }
 
-void insertion(int arr[],int size){
+void  insertion(int arr[],int size){
     cout<<"Enter the elements in the array: ";
     for(int i=0;i<size;i++){
         cin>>arr[i];
