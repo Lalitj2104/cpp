@@ -5,12 +5,15 @@ class rectangle{
     int length;
     int breadth;
     public:
+
     int area(){
         return(length*breadth);
     }
+
     int perimeter(){
         return(2*(length+breadth));
     }
+
     void setLength(int l){
         if(l>0){
             length=l;
@@ -20,6 +23,7 @@ class rectangle{
             length =0;
         }
     }
+
     void setBreadth(int b){
         if(b>0){
             breadth=b;
@@ -29,12 +33,14 @@ class rectangle{
             breadth=0;
         }
     }
+
     int getLength(){
         return length;
     }
     int getBreadth(){
         return breadth;
     }
+    
 };
 int main(){
     rectangle r;
