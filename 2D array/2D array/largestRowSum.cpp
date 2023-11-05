@@ -5,7 +5,7 @@ using namespace std;
 void largestRowWiseSum(int arr[][100], int row, int column)
 {
     int large = INT_MIN;
-    int index=-1;
+    int index = -1;
     for (int i = 0; i < row; i++)
     {
         int sum = 0;
@@ -13,13 +13,13 @@ void largestRowWiseSum(int arr[][100], int row, int column)
         {
             sum += arr[i][j];
         }
-        if (sum>large){
-            large=sum;
-            index=i;
+        if (sum > large)
+        {
+            large = sum;
+            index = i;
         }
-        
     }
-    cout << "largest  row sum: " << large <<" of row "<< (index+1)<< endl;
+    cout << "largest  row sum: " << large << " of row " << (index + 1) << endl;
 }
 int main()
 {
