@@ -1,5 +1,23 @@
 #include <iostream>
 using namespace std;
+
+// int p(string num, int i, int j)
+// {
+
+//     if (i > j)
+//     {
+//         return true;
+//     }
+//     if (num[i] != num[j])
+//     {
+//         return false;
+//     }
+//     else
+//     {
+//         return p(num, i + 1, j - 1);
+//     }
+// }
+
 void palindrome(string &num, int i, int j)
 {
     if (i > j)
