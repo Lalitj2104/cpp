@@ -73,6 +73,6 @@ int main()
         int result = fOccurence(arr, len, key);
         int result2 = lastOccurence(arr, len, key);
         int finalResult = (result2 - result) + 1;
-        cout<<"Total number of occurence is: "<<finalResult<<endl;
+        cout << "Total number of occurence is: " << finalResult << endl;
     }
 }
