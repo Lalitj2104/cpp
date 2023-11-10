@@ -12,8 +12,6 @@ int sumOfArray(int arr[],int size){
     sum=arr[0]+remain;
     return sum;
 
-        
-   
     
     
 }
