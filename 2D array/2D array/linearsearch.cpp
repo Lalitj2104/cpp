@@ -17,6 +17,9 @@ int main()
         }
     }
 
+
+
+
     // for getting the target whose index we have to find
     cout << "enter the element u want to find: " << endl;
     cin >> target;
