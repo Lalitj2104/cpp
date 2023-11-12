@@ -8,6 +8,8 @@ int main()
     cin >> row >> column;
 
     cout << "enter the elements in the array: ";
+    
+    
     // for inputing the values from the users
     for (int i = 0; i < row; i++)
     {
