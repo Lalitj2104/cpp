@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+
 void wavePrint(int arr[][100], int row, int column)
 {
 
@@ -22,6 +23,7 @@ void wavePrint(int arr[][100], int row, int column)
         cout<<endl;
     }
 }
+
 
 int main()
 {
