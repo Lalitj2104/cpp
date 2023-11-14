@@ -23,6 +23,8 @@ int binarySearch(int arr[], int size, int s, int e, int key)
     }
 }
 
+
+
 void insertion(int arr[], int size)
 {
     cout << "Enter the elements u want in array: ";
