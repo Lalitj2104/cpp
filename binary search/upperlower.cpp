@@ -29,6 +29,8 @@ void search(int arr[],int size,int key){
     }
 }
 
+
+
 int main(){
     int size,key,arr[100];
     cout<<"Enter size of array: ";
