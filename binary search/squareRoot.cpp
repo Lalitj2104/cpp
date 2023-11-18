@@ -3,9 +3,9 @@ using namespace std;
 long long int squareRoot(int n)
 {
     int s = 0;
-    int e = n ;
+    int e = n;
     int mid = s + (e - s) / 2;
-    
+
     long long int ans = -1;
     while (s <= e)
     {
@@ -21,7 +21,7 @@ long long int squareRoot(int n)
         }
         else
         {
-            e = mid-1;
+            e = mid - 1;
         }
         mid = s + (e - s) / 2;
     }
