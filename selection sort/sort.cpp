@@ -13,25 +13,24 @@ void insertion(int arr[], int size)
 
 void selection_sort(int arr[], int size)
 {
-    for (int i = 0; i < size-1; i++)
+    for (int i = 0; i < size - 1; i++)
     {
         int minIndex = i;
-        for (int j = i+1; j < size; j++)
+        for (int j = i + 1; j < size; j++)
         {
-            if ( arr[j]<arr[minIndex])
+            if (arr[j] < arr[minIndex])
             {
-                
+
                 minIndex = j;
             }
         }
         swap(arr[minIndex], arr[i]);
-
     }
 }
 
 void result(int arr[], int size)
 {
-    cout<<"array in sorted order: "<<endl;
+    cout << "array in sorted order: " << endl;
     for (int i = 0; i < size; i++)
     {
         cout << arr[i] << endl;
