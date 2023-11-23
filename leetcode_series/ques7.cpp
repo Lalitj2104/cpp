@@ -59,6 +59,6 @@ int main(){
     int Pivot=getPivot(arr,size);
 
     if(key>=arr[Pivot] && key<=arr[size-1]){
-        return binarySearch(arr,Pivot,(size-1),key);
+        return binarySearch(arr,size,Pivot,(size-1),key);
     }
 }
