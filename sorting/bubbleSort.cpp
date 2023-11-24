@@ -21,6 +21,7 @@ void result(int arr[], int size)
 }
 void bubbleSort(int arr[], int size)
 {
+    bool flag =false;
     while (size--)
     {
         for (int i = 0; i < size; i++)
@@ -28,11 +29,15 @@ void bubbleSort(int arr[], int size)
             if (arr[i] > arr[i + 1])
             {
                 swap(arr[i], arr[i + 1]);
+                flag=true;
             }
             else
             {
                 continue;
             }
+        }
+        if(flag==false){
+            break;
         }
     }
 }
