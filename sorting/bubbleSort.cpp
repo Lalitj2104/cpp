@@ -10,6 +10,7 @@ void insertion(int arr[], int size)
         cin >> arr[i];
     }
 }
+
 void result(int arr[], int size)
 {
     cout << "sorted array: " << endl;
@@ -19,6 +20,7 @@ void result(int arr[], int size)
         cout << arr[i]<<endl;
     }
 }
+
 void bubbleSort(int arr[], int size)
 {
     bool flag =false;
