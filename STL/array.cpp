@@ -11,6 +11,7 @@ int main(){
     }
 
     cout<<arr.empty()<<endl;
+    cout<<"element at index 2: "<<arr.at(2)<<endl;
     cout<<"first element of array: "<<arr.front()<<endl;
     cout<<"last element of array: "<<arr.back()<<endl;
 }
