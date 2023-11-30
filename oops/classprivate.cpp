@@ -19,7 +19,7 @@ class rectangle{
             length=l;
         }
         else{
-            cout<<"length can't be negative";
+            cout<<"length can't be negative"<<endl;
             length =0;
         }
     }
@@ -29,7 +29,7 @@ class rectangle{
             breadth=b;
         }
         else{
-            cout<<"breadth can't be negative";
+            cout<<"breadth can't be negative"<<endl;
             breadth=0;
         }
     }
@@ -47,5 +47,5 @@ int main(){
     r.setLength(10);
     r.setBreadth(20);
     cout<<r.area()<<endl;
-    cout<<r.perimeter();
+    cout<<r.perimeter()<<endl;
 }
