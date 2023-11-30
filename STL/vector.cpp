@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 #include <vector>
 using namespace std;
 int main(){
@@ -32,4 +33,10 @@ int main(){
     for(int i:v){
         cout<<i<<" ";
     }
+    v.push_back(4);
+    v.push_back(6);
+    v.push_back(7);
+    v.push_back(8);
+    v.push_back(9);
+    cout<<"Finding with binary search-> "<<binary_search(v.begin(),v.end(),7);
 }
