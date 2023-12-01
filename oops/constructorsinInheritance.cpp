@@ -21,8 +21,4 @@ class derived :public base{
 
 int main(){
     derived d;
-  //first the default of base is executed
-  //second the default of derived is executed
-  //third the parameterized of base will be executed;
-  //fourth the parameterized of derived will be executed
 }
