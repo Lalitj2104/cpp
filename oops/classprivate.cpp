@@ -38,12 +38,18 @@ class rectangle{
     int getBreadth(){
         return breadth;
     }
+    bool isSquare(){
+        return length==breadth;
+    }
+    ~rectangle(){
+        cout<<"Rectangle is destroyed";
+    }
     
 };
     int rectangle::getLength(){
         return length;
     }
-    
+
 int main(){
     rectangle r;
     r.setLength(10);
