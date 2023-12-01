@@ -34,14 +34,16 @@ class rectangle{
         }
     }
 
-    int getLength(){
-        return length;
-    }
+    int getLength();
     int getBreadth(){
         return breadth;
     }
     
 };
+    int rectangle::getLength(){
+        return length;
+    }
+    
 int main(){
     rectangle r;
     r.setLength(10);
