@@ -17,6 +17,10 @@ class derived :public base{
     derived(int x){
         cout<<"derived of derived"<<endl;
     }
+    derived(int x,int y):base(x){
+        cout<<"param of derived"<<y<<endl;
+        
+    }
 };
 
 int main(){
