@@ -18,12 +18,13 @@ public:
         temp.img = img + a.img;
         return temp;
     }
-    friend ostream & operator<<(ostream &o,complex &c4);
+    friend ostream &operator<<(ostream &o, complex &c4);
 };
-     ostream & operator<<(ostream &o,complex &c4){
-        o<<c4.real<<"+i"<<c4.img;
-        return o;
-     }
+ostream &operator<<(ostream &o, complex &c4)
+{
+    o << c4.real << "+i" << c4.img;
+    return o;
+}
 
 int main()
 {
