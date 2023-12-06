@@ -1,5 +1,6 @@
 #include<iostream>
 #include <bits/stdc++.h>
+// #include<vector>
 using namespace std;
 int  main(){
     vector<int> v;
@@ -28,4 +29,24 @@ int  main(){
     for(int i:v){
         cout<<i<<endl;
     }
+    int sum=accumulate(v.begin(),v.end(),0);
+    cout<<sum<<endl;
+
+    int cnt=count(v.begin(),v.end(),3);
+    cout<<cnt <<endl;
+
+    auto it=find(v.begin(),v.end(),3);
+    cout<<it-v.begin()<<endl;
+
+    bool result=binary_search(v.begin(),v.end(),7);
+    cout<<result<<endl;
+
+    auto im=lower_bound(v.begin(),v.end(),5);
+    cout<<im-v.begin()<<endl;
+
+    // int cc=upper_bound(v.begin(),v.end(),5);
+    // cout<<cc-v.begin()<<endl;
+
+
+
 }
