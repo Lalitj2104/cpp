@@ -17,7 +17,19 @@ int main(){
                 sum+=arr[i][j];
             }
         }
+        
     }
+
+    int q=z/2;
+        sum-=arr[q][q];
+    for(int i=0;i<z;i++){
+        for(int j=0;j<x;j++){
+            if(j==x-1){
+                sum+=arr[i][x-i-1];
+            }
+        }
+    }
+
 
     cout << sum<<endl;
 }
