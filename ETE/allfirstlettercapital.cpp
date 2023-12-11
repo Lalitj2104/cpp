@@ -7,6 +7,9 @@ int main(){
         if(i==0 ){
             ch[i]=toupper(ch[i]);
         }
+        if(ch[i-1]==' '){
+            ch[i]=toupper(ch[i]);
+        }
     }
     cout<<ch;
 }
