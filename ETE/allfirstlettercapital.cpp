@@ -1,15 +1,19 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main(){
+int main()
+{
     string ch;
-    getline(cin,ch);
-    for(int i=0;i<ch.length();i++){
-        if(i==0 ){
-            ch[i]=toupper(ch[i]);
+    getline(cin, ch);
+    for (int i = 0; i < ch.length(); i++)
+    {
+        if (i == 0)
+        {
+            ch[i] = toupper(ch[i]);
         }
-        if(ch[i-1]==' '){
-            ch[i]=toupper(ch[i]);
+        if (ch[i - 1] == ' ')
+        {
+            ch[i] = toupper(ch[i]);
         }
     }
-    cout<<ch;
+    cout << ch;
 }
