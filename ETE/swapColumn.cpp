@@ -11,6 +11,8 @@ int main(){
         }
     }
     
+
+    
     for (i=0;i<r;i++){
         for (j=c-1;j>=0;j--){
             cout << arr[i][j] << " ";
