@@ -6,6 +6,8 @@ int main(){
     cin>>q>>w;
     int x=q+w;
     int arr[x];
+
+    
     for(int i=0;i<q;i++){
         cin>>arr[i];
     }
