@@ -17,13 +17,13 @@ void result(int arr[], int size)
 
     for (int i = 0; i < size; i++)
     {
-        cout << arr[i]<<endl;
+        cout << arr[i] << endl;
     }
 }
 
 void bubbleSort(int arr[], int size)
 {
-    bool flag =false;
+    bool flag = false;
     while (size--)
     {
         for (int i = 0; i < size; i++)
@@ -31,14 +31,15 @@ void bubbleSort(int arr[], int size)
             if (arr[i] > arr[i + 1])
             {
                 swap(arr[i], arr[i + 1]);
-                flag=true;
+                flag = true;
             }
             else
             {
                 continue;
             }
         }
-        if(flag==false){
+        if (flag == false)
+        {
             break;
         }
     }
