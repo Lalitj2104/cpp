@@ -1,56 +1,76 @@
 #include <iostream>
 using namespace std;
-// class arr
-// {
-// public:
-//     int *A;
-//     int size;
-//     int length;
 
-// public:
-//     arr()
-//     {
-//         size = 10;
-//         length = 0;
-//         A = new int[size];
-//     }
-//     arr(int z)
-//     {
-//         size = z;
-//         length = 0;
-//         A = new int[z];
-//     }
-
-//     ~arr
-//     {
-//         delete[] A;
-//     }
-// };
-
-// void display(arr a)
-// {
-//     for (int i = 0; i < arr.size; i++)
-//     {
-//         cout << a.A[i];
-//     }
-// }
-
-int main()
-{
-    arr a;
-    int n;
-    cout << "Enter size of an array: " << endl;
-    cin >> &a.size;
-    a.A = new int[arr.size];
-    a.length = 0;
-
-    cout << "Enter elements in array: " << endl;
-
-    for (int i = 0; i < a.size; i++)
+template<class T>
+class Array{
+    private:
+    T *A;
+    int size;
+    int length;
+    public:
+    Array()
     {
-        cin >> &a.A[i];
-    }
-    a.length = n;
+        size=10;
+        A=new T[10];
+        length=0;
 
-    display(a);
+    }
+
+    Array(int sz){
+        size=sz;
+        A=new T[size];
+        length=0;
+    }
+
+    ~Array(){
+        delete []A;
+    }
+    void Display();
+    void Insert(int index,T x);
+    T Delete(int index);
+};
+
+template<class T>
+void Array<T>::Display(){
+    cout<<"Elements in array: "<<endl;
+    for(int i=0;i<length;i++){
+        cout<<A[i]<<" ";
+    }
+}
+
+template<class T>
+void Array<T>::Insert(int index,T x){
+    if(index>=0 && index<=length){
+        for(int i=length-1;i>=index;i++){
+            A[i+1]=A[i];
+            A[index]=x;
+            length++;
+        }
+    }
+}
+
+template<class T>
+T Array<T>::Delete(int index){
+    T x=0;
+    if(index>=0 && index <length){
+        x=A[index];
+        for(int i=index;i<length;i++){
+            A[i]=A[i+1];
+            length--;
+        }
+        
+    } 
+    return x;
+}
+
+
+int main(){
+    Array<char> arr(10);
+
+    arr.Insert(0,'a');
+    arr.Insert(1,'b');
+    arr.Insert(2,'c');
+    arr.Display();
+    // cout<<arr.Delete(0)<<endl;
+    // arr.Display();
 }
