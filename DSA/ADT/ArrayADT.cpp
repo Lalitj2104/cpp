@@ -26,9 +26,12 @@ class Array{
     ~Array(){
         delete []A;
     }
+
     void Display();
     void Insert(int index,T x);
     T Delete(int index);
+    int Linear_Search(T key);
+    int Binary_Search(T key);
 };
 
 template<class T>
@@ -68,14 +71,49 @@ T Array<T>::Delete(int index){
     return x;
 }
 
+template<class T>
+int Array<T>::Linear_Search(T key){
+        for(int i=0;i<length;i++){
+            if (key==A[i]){ 
+                swap(A[0],A[i]);        //move to front method for constant time 
+                return i;
+            }   
+        }    
+        return -1;
+    }
+
+
+template<class T>
+int Array<T>::Binary_Search(T key){
+    int s=0,e=length;
+    int mid=s+(e-s)/2;
+    while(s<=e){
+        if(key==A[mid]){
+            return mid;
+
+        }
+
+        else if(key<A[mid]){
+            e=mid-1;
+        }
+        else{
+            s=mid+1;
+        }
+        mid=s+(e-s)/2;
+    }
+    return -1;
+
+}
 
 int main(){
-    Array<char> arr(10);
+    Array<int> arr(10);
 
-    arr.Insert(0,'a');
-    arr.Insert(1,'b');
-    arr.Insert(2,'c');
+    arr.Insert(0,100);
+    arr.Insert(1,200);
+    arr.Insert(2,300);
     arr.Display();
-    cout<<"Removed element is: "<<arr.Delete(0)<<endl;
+    // cout<<"Removed element is: "<<arr.Delete(0)<<endl;
+    // cout<<arr.Linear_Search(300)<<endl;
+    // cout<<arr.Binary_Search(400)<<endl;
     arr.Display();
 }
