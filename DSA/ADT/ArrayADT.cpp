@@ -32,6 +32,17 @@ class Array{
     T Delete(int index);
     int Linear_Search(T key);
     int Binary_Search(T key);
+    void get(int index);
+    void Set(int index,T value);
+    void max();
+    void min();
+    void sum();
+    void avg();
+    void reverse();
+    void rightShift();
+    void leftShift();
+    void rightrotation();
+    void leftrotation();
 };
 
 template<class T>
@@ -105,6 +116,117 @@ int Array<T>::Binary_Search(T key){
 
 }
 
+
+template<class T>
+void Array<T>::get(int index){
+    if(index>=length){
+        cout<<"out of range"<<endl;
+    }
+    else{
+        cout<<A[index]<<endl;
+    }
+}
+
+
+template<class T>
+void Array<T>::Set(int index,T value){
+    if(index>=length){
+        cout<<"out of range"<<endl;
+    }
+    else{
+        A[index] =value;
+    }
+}
+
+template<class T>
+void Array<T>::max(){
+    T max=A[0];
+    for(int i=1;i<length;i++){
+        if(A[i]>max){
+            max=A[i];
+        }
+    }
+    cout<<"Max element is: "<<max<<endl;
+}
+
+template<class T>
+void Array<T>::min(){
+    T min=A[0];
+    for(int i=1;i<length;i++){
+        if(A[i]<min){
+            min=A[i];
+        }
+    }
+    cout<<"Min element is: "<<min<<endl;
+}
+
+template<class T>
+void Array<T>::sum(){
+    T total=0;
+    for(int i=0;i<length;i++){
+        total += A[i];
+    }
+
+    cout<<"sum is: "<<total<<endl;
+}
+
+template<class T>
+void Array<T>::avg(){
+    T avg;
+    T total=0;
+    for(int i=0;i<length;i++){
+        total += A[i];
+    }
+    avg=total/length;
+
+    cout<<"Avg is: "<<avg<<endl;
+}
+
+template<class T>
+void Array<T>:: reverse(){
+    int i,j;
+    for(i=0,j=length-1;i<j;i++,j--){
+        swap(A[i],A[j]);
+    }
+}
+
+
+template<class T>
+void Array<T>::leftShift(){
+    for(int i=0;i<length;i++){
+        A[i]=A[i+1];
+    }
+    A[length-1]=0;
+}
+
+template<class T>
+void Array<T>::rightShift(){
+    for(int i=length-1;i>=0;i--){
+        A[i]=A[i-1];
+    }
+    A[0]=0;
+}
+
+
+template<class T>
+void Array<T>::leftrotation(){
+    T temp=A[0];
+    for(int i=0;i<length;i++){
+        A[i]=A[i+1];
+    }
+    A[length-1]=temp;
+}
+
+template<class T>
+void Array<T>::rightrotation(){
+    T temp=A[length-1];
+    for(int i=length-1;i>=0;i--){
+        A[i]=A[i-1];
+    }
+    A[0]=temp;
+}
+
+
 int main(){
     Array<int> arr(10);
 
@@ -112,8 +234,6 @@ int main(){
     arr.Insert(1,200);
     arr.Insert(2,300);
     arr.Display();
-    // cout<<"Removed element is: "<<arr.Delete(0)<<endl;
-    // cout<<arr.Linear_Search(300)<<endl;
-    // cout<<arr.Binary_Search(400)<<endl;
-    arr.Display();
+
+
 }
