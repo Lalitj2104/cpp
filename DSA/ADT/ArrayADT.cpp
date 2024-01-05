@@ -18,8 +18,9 @@ class Array{
 
     Array(int sz){
         size=sz;
+         length=0;
         A=new T[size];
-        length=0;
+       
     }
 
     ~Array(){
@@ -32,32 +33,36 @@ class Array{
 
 template<class T>
 void Array<T>::Display(){
+    int i;
     cout<<"Elements in array: "<<endl;
-    for(int i=0;i<length;i++){
+    for(i=0;i<length;i++){
         cout<<A[i]<<" ";
     }
+    cout<<endl;
 }
 
 template<class T>
 void Array<T>::Insert(int index,T x){
+    int i;
     if(index>=0 && index<=length){
-        for(int i=length-1;i>=index;i++){
-            A[i+1]=A[i];
-            A[index]=x;
-            length++;
-        }
+        for(i=index;i<=length;i++){
+        A[i+1]=A[i];
+        A[index]=x;
+      }
+      length++;
     }
 }
 
 template<class T>
 T Array<T>::Delete(int index){
     T x=0;
+    int i;
     if(index>=0 && index <length){
         x=A[index];
-        for(int i=index;i<length;i++){
-            A[i]=A[i+1];
-            length--;
+        for(i=index;i<length;i++){
+            A[i]=A[i+1];   
         }
+        length--;
         
     } 
     return x;
@@ -71,6 +76,6 @@ int main(){
     arr.Insert(1,'b');
     arr.Insert(2,'c');
     arr.Display();
-    // cout<<arr.Delete(0)<<endl;
-    // arr.Display();
+    cout<<"Removed element is: "<<arr.Delete(0)<<endl;
+    arr.Display();
 }
