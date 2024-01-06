@@ -67,6 +67,7 @@ void Array<T>::Insert(int index,T x){
     }
 }
 
+
 template<class T>
 T Array<T>::Delete(int index){
     T x=0;
