@@ -7,6 +7,7 @@ class Array{
     T *A;
     int size;
     int length;
+    
     public:
     Array()
     {
