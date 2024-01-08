@@ -232,6 +232,7 @@ void Array<T>::rightrotation(){
 int main(){
     Array<int> arr(10);
 
+
     arr.Insert(0,100);
     arr.Insert(1,200);
     arr.Insert(2,300);
