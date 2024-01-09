@@ -45,6 +45,7 @@ public:
     void leftShift();
     void rightrotation();
     void leftrotation();
+    void isSorted()
 };
 
 template <class T>
@@ -262,12 +263,78 @@ void Array<T>::rightrotation()
     A[0] = temp;
 }
 
+template <class T>
+void Array<T>::isSorted()
+{
+    bool flag = 0;
+    for (int i = length - 1; i >= 1; i--)
+    {
+        if (A[i - 1] < A[i])
+        {
+            flag = 1;
+        }
+        else
+        {
+            cout << "Not Sorted" << endl;
+            break;
+        }
+    }
+    if (flag == 1)
+    {
+        cout << "Sorted" << endl;
+    }
+}
+
 int main()
 {
-    Array<int> arr(10);
+    Array<int> *arr1;
+    int ch, sz;
+    int x, index;
 
-    arr.Insert(0, 100);
-    arr.Insert(1, 200);
-    arr.Insert(2, 300);
-    arr.Display();
+    cout << "Enter Size of Array";
+    cin >> sz;
+    arr1 = new Array<int>(sz);
+
+    do
+    {
+        cout << "\n\nMenu\n";
+        cout << "1. Insert\n";
+        cout << "2. Delete\n";
+        cout << "3. Search\n";
+        cout << "4. Sum\n";
+        cout << "5. Display\n";
+        cout << "6.Exit\n";
+
+        cout << "enter you choice ";
+        cin >> ch;
+
+        switch (ch)
+        {
+        case 1:
+            cout << "Enter an element and index ";
+            cin >>
+                x >> index;
+            arr1->Insert(index, x);
+            break;
+        case 2:
+            cout << "Enter index ";
+            cin >> index;
+            x = arr1->Delete(index);
+            cout << "Deleted Element is" << x;
+            break;
+        case 3:
+            cout << "Enter element to search  ";
+            cin >>
+                x;
+            index = arr1->Linear_Search(x);
+            cout << "Element index " << index;
+            break;
+        case 4:
+            arr1->sum();
+            break;
+        case 5:
+            arr1->Display();
+        }
+    } while (ch < 6);
+    return 0;
 }
