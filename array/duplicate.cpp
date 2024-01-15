@@ -11,6 +11,8 @@ int duplicate (int arr[],int size){
     return ans;
        
 }
+
+
 int main(){
 
     int num, arr[100], size;
