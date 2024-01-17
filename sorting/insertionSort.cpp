@@ -1,3 +1,4 @@
+// card giving algorithm
 #include <iostream>
 using namespace std;
 
