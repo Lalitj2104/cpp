@@ -39,12 +39,12 @@ void diagonal::set(int i,int j,int x){
         A[i-1]=x;
     }
 }
-int diagonal::get(int i,int j){
-    if(i==j){
-        return A[i-1];
-    }
-    return 0;
-}
+// int diagonal::get(int i,int j){
+//     if(i==j){
+//         return A[i-1];
+//     }
+//     return 0;
+// }
 
 int main(){
     diagonal d(4);
