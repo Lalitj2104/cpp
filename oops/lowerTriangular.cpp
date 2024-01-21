@@ -25,6 +25,9 @@ public:
     {
         delete[] A;
     }
+    int getDimension(){
+        return size;
+    }
 };
 
 void lowerTriangularMatrix::display()
@@ -33,14 +36,15 @@ void lowerTriangularMatrix::display()
     {
         for (int j = 1; j <= size; j++)
         {
-            if (j < i)
-            {
-                cout << "0 ";
-            }
-            else
+            if (i >= j)
             {
                 int x = (i * (i - 1)) / 2 + j - 1;
                 cout << A[x] << " ";
+               
+            }
+            else
+            {
+                 cout << "0 ";
             }
             cout << endl;
         }
@@ -51,7 +55,8 @@ void lowerTriangularMatrix::set(int i, int j, int s)
 {
     if (i >= j)
     {
-        A[i * (i - 1) / 2 + j - 1] = s;
+        int x=i * (i - 1) / 2 + j - 1;
+        A[x] = s;
     }
 }
 int lowerTriangularMatrix::get(int i, int j)
@@ -72,7 +77,7 @@ int main()
     cout << "enter all the elements: " << endl;
     for (int i = 1; i <= d; i++)
     {
-        for (int j = 1; i <= d; j++)
+        for (int j = 1; j<= d; j++)
         {
             cin >> x;
             lm.set(i, j, x);
