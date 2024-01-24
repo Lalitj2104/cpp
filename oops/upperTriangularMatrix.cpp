@@ -1,3 +1,5 @@
+//not working i'll do it later
+
 #include <iostream>
 using namespace std;
 class upperMatrix
