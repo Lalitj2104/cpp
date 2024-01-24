@@ -1,4 +1,4 @@
-//not working i'll do it later
+
 
 #include <iostream>
 using namespace std;
@@ -7,15 +7,18 @@ class upperMatrix
 private:
     int *A;
     int size;
+    int siz;
 
 public:
     upperMatrix()
     {
         int size = 2;
+        size = (2 * (2 + 1)) / 2;
         A = new int[size];
     }
     upperMatrix(int q)
     {
+        siz=q;
         size = (q * (q + 1)) / 2;
         A = new int[size];
     }
@@ -33,11 +36,11 @@ public:
 };
 void upperMatrix::Display()
 {
-    for (int i = 1; i <= size; i++)
+    for (int i = 1; i <= siz; i++)
     {
-        for (int j = 1; j <= size; j++)
+        for (int j = 1; j <= siz; j++)
         {
-            if (j <= i)
+            if (j >= i)
             {
                 int x = ((i-1)*size-((i-2)*i-1)/2)+ j - i;
                 cout << A[x] << " ";
@@ -52,7 +55,7 @@ void upperMatrix::Display()
 }
 void upperMatrix::set(int i, int j, int s)
 {
-    if (i >= j)
+    if (i <= j)
     {
         int x = ((i-1)*size-((i-2)*i-1)/2)+ j - i;
         A[x] = s;
@@ -60,7 +63,7 @@ void upperMatrix::set(int i, int j, int s)
 }
 int upperMatrix::get(int i, int j)
 {
-    if (i >= j)
+    if (i <= j)
         return A[((i-1)*size-((i-2)*i-1)/2)+ j - i];
     return 0;
 }
