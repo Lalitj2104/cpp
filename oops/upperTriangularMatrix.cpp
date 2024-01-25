@@ -34,6 +34,8 @@ public:
         delete[] A;
     }
 };
+
+
 void upperMatrix::Display()
 {
     for (int i = 1; i <= siz; i++)
