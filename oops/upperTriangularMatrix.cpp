@@ -22,6 +22,7 @@ public:
         size = (q * (q + 1)) / 2;
         A = new int[size];
     }
+    
     void Display();
     void set(int i, int j, int s);
     int get(int i, int j);
