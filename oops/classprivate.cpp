@@ -46,9 +46,12 @@ class rectangle{
     }
     
 };
-    int rectangle::getLength(){
-        return length;
-    }
+
+int rectangle::getLength(){
+    return length;
+}
+
+
 
 int main(){
     rectangle r;
