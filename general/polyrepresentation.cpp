@@ -14,3 +14,6 @@ class poly{
     public:
     
 };
+int main(){
+    
+}
