@@ -6,12 +6,21 @@ class node{
     node * next;
 }*first=NULL;
 
+
 void display(node *p){
     while(p!= NULL){
        cout<<p->data<<" ";
        p=p->next; 
     }
 }
+
+// recursive function for display
+// void display(node *p){
+//     if(p!= NULL){
+//        cout<<p->data<<" ";
+//        display(p->next); 
+//     }
+// }
 
 void create(int A[],int n){
     int i;
