@@ -35,7 +35,22 @@ void max(node *q){
     cout<<"maximum element is: "<<max<<endl;
 }
 
-
+//recursive aaproach
+// int max(node *q){
+//     int x=0;
+//     if(q==0){
+//         return INT8_MIN;
+//     }
+//     else{
+//         x=max(q->next);
+//         if(x>q->data){
+//             return x;
+//         }
+//         else{
+//             return q->data;
+//         }
+//     }
+// }
 
 int main(){
     int A[]={2,4,6,8,10};

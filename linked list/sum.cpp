@@ -32,6 +32,17 @@ void sum(node *z){
     cout<<"sum of the values: "<<sum<<endl;
 }
 
+//recursive approach
+// int add(node *q){
+//     if(q==0){
+//         return 0;
+
+//     }
+//     else{
+//         return add(q->next)+q->data;
+//     }
+// }
+
 
 int main(){
     int A[]={2,4,6,8,10};
