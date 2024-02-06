@@ -35,7 +35,7 @@ void max(node *q){
     cout<<"maximum element is: "<<max<<endl;
 }
 
-//recursive aaproach
+//recursive approach
 // int max(node *q){
 //     int x=0;
 //     if(q==0){
