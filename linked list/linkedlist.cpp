@@ -65,7 +65,7 @@ void insert(node* &head,int d){
 }
 
 void print(){
-    
+        
 }
 
 int main()
