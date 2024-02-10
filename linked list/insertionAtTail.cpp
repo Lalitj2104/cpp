@@ -17,9 +17,14 @@ void insert(node *&head ,node * &last){
     cout<<"enter data: "<<endl;
     cin>>d; 
     node * temp=new node(d);
-    last->next=temp;
-    temp->next=NULL;
-    last=temp;
+    if(head==NULL){
+        head=last=temp;
+    }
+    else{
+        last->next=temp;
+        last=temp;
+    
+    }
     
 }
 
@@ -33,7 +38,7 @@ void print(node * &head){
 }
 
 int main(){
-    node *head=new node(10);
+    node *head=NULL;
     node *last=head;
     insert(head,last);
     insert(head,last);
