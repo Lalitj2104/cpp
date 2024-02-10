@@ -12,9 +12,14 @@ class node{
     }
 };
 
-void insert(node *&head,int d){
-    
+void insert(node *&head ,node * &last){
+    int d;
+    cout<<"enter data: "<<endl;
+    cin>>d; 
     node * temp=new node(d);
+    last->next=temp;
+    temp->next=NULL;
+    last=temp;
     
 }
 
@@ -28,5 +33,12 @@ void print(node * &head){
 }
 
 int main(){
+    node *head=new node(10);
+    node *last=head;
+    insert(head,last);
+    insert(head,last);
+    insert(head,last);
+    insert(head,last);
+    print(head);
 
 }
