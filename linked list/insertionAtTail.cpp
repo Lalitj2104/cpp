@@ -13,6 +13,7 @@ class node{
 };
 
 void insert(node *&head,int d){
+    
     node * temp=new node(d);
     
 }
@@ -27,5 +28,5 @@ void print(node * &head){
 }
 
 int main(){
-    
+
 }
