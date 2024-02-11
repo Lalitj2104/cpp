@@ -1,3 +1,1 @@
-    insert(head,last);
-    insert(head,last);
-    insert(head,last);
+    // delete(first);
