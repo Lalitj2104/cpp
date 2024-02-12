@@ -14,14 +14,25 @@ void display(node *p){
     cout<<endl;
 }
 
-// recursive function for display
-// void display(node *p){
-//     if(p!= NULL){
-//        cout<<p->data<<" ";
-//        display(p->next);
-//     }
-// }
+void sorted(node *first){
+    node *p=first->next;
+    int x=first->data;
+    bool flag=0;
+    while(p!=NULL){
+        if(x>p->data){
+            flag=1;
+        }
+        x=p->data;
+        p=p->next;
 
+    }
+    if(flag==0){
+        cout<<"Sorted"<<endl;
+    }
+    else{
+        cout<<"Not Sorted"<<endl;
+    }
+}
 void create(int A[],int n){ 
     int i;
     node *t,*last;
@@ -40,9 +51,9 @@ void create(int A[],int n){
 }
 
 int main(){
-    int A[]={1,2,3,4,5};
+    int A[]={10,20,35,40,50};
     create(A,5);
     display(first);
+    sorted(first);
 
 }
-
