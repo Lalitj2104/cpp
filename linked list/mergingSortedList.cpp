@@ -19,6 +19,8 @@ void display(node *p)
     cout << endl;
 }
 
+
+
 void create(int A[], int n)
 {
     int i;
