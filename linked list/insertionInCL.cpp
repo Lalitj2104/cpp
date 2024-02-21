@@ -37,13 +37,14 @@ void display(node *p)
     }while (p != first);
     cout << endl;
 }
+
 int count(node *p)
 {
     int count;
-    while (p != first)
+do
     {
-        ++count;
-    }
+       ++count;
+    }while (p != first);
     return count;
 }
 
@@ -66,10 +67,11 @@ void insert(node *first, int pos, int x)
             while (p->next != first)
             {
                 p = p->next;
+            }
                 p->next = t;
                 t->next = first;
                 first = t;
-            }
+            
         }
     }
     else
