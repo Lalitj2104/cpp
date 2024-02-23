@@ -45,7 +45,7 @@ void insert(node * p,int pos,int x){
     }
 }
 
-void create(int A[],int n){
+void create(int A[],int n, node * &first){
     int i;
     node *t,*last;
 
@@ -67,10 +67,12 @@ void create(int A[],int n){
 }
 int main(){
     int a[]={1,2,3,4,5};
-    int b[]={}
-    create(a,5);
+    int b[]={8,5,7};
+    node *second=new node;
+    create(a,5,first);
+    create(b,3,second);
+    
     display(first);
-    insert(first,3,20);
-        display(first);
+        display(second);
 
 }
