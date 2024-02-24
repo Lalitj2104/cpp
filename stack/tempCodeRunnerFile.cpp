@@ -1,4 +1,6 @@
-    // s.push(20);
-    // s.push(30);
-    // s.push(40);
-    // s.push(50);
+  first=new node;
+    push(first,10);
+    push(first,20);
+    push(first,30);
+    stackTop(first);
+    peak(first,2);
