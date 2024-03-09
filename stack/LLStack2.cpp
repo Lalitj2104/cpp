@@ -17,6 +17,8 @@ public:
     void pop();
     void display();
 };
+
+
 void stack::push(int x)
 {
     node *temp = new node;
@@ -59,6 +61,8 @@ void stack::display()
     }
     cout << endl;
 }
+
+
 
 int main()
 {
