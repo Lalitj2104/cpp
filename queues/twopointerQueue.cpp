@@ -1,18 +1,23 @@
+#include <iostream>
+using namespace std;
 #include<iostream>
 using namespace std;
 class queue{
     int size;
     int p;
+    int y;
     int *a;
     public:
     queue(){
         size=5;
         p=-1;
+        y=0;
         a=new int[size];
     }
     queue(int size){
         this->size=size;
         p=-1;
+        y=0;
         a=new int[size];
     }
     void enqueue(int x);
@@ -25,7 +30,7 @@ class queue{
 };
 
 void queue:: display(){
-    for(int i=0;i<=p;i++){
+    for(int i=y;i<=p;i++){
         cout<<a[i]<<" ";
     }
     cout<<endl;
@@ -56,7 +61,7 @@ bool queue::isFull(){
 }
 
 void queue::first(){
-    cout<<"the first element in queue is: "<<a[0]<<endl;
+    cout<<"the first element in queue is: "<<y<<endl;
 }
 
 void queue::last(){
@@ -68,11 +73,7 @@ void queue::dequeue(){
     if(isEmpty()){
         cout<<"Queue is empty"<<endl;
     }
-    for(int i=0;i<p;i++){
-        a[i]=a[i+1];
-
-    }
-    p--;
+    y++;
 }
 
 int main(){
