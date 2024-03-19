@@ -1,24 +1,28 @@
 #include <iostream>
 using namespace std;
-#include<iostream>
+#include <iostream>
 using namespace std;
-class queue{
+class queue
+{
     int size;
     int p;
     int y;
     int *a;
-    public:
-    queue(){
-        size=5;
-        p=-1;
-        y=0;
-        a=new int[size];
+
+public:
+    queue()
+    {
+        size = 5;
+        p = -1;
+        y = 0;
+        a = new int[size];
     }
-    queue(int size){
-        this->size=size;
-        p=-1;
-        y=0;
-        a=new int[size];
+    queue(int size)
+    {
+        this->size = size;
+        p = -1;
+        y = 0;
+        a = new int[size];
     }
     void enqueue(int x);
     void dequeue();
@@ -29,54 +33,66 @@ class queue{
     void display();
 };
 
-void queue:: display(){
-    for(int i=y;i<=p;i++){
-        cout<<a[i]<<" ";
+void queue::display()
+{
+    for (int i = y; i <= p; i++)
+    {
+        cout << a[i] << " ";
     }
-    cout<<endl;
+    cout << endl;
 }
 
-void queue::enqueue(int x){
-    if(isFull()){
-        cout<<"Queue is full"<<endl;
+void queue::enqueue(int x)
+{
+    if (isFull())
+    {
+        cout << "Queue is full" << endl;
     }
-    else{
-        a[p+1 ]=x;
+    else
+    {
+        a[p + 1] = x;
         p++;
     }
 }
-bool queue::isEmpty(){
-    if(p==-1)
+bool queue::isEmpty()
+{
+    if (p == -1)
     {
         return 1;
     }
     return 0;
 }
 
-bool queue::isFull(){
-    if(p==size-1){
+bool queue::isFull()
+{
+    if (p == size - 1)
+    {
         return 1;
     }
     return 0;
 }
 
-void queue::first(){
-    cout<<"the first element in queue is: "<<y<<endl;
+void queue::first()
+{
+    cout << "the first element in queue is: " << y << endl;
 }
 
-void queue::last(){
-    cout<<"the last element in queue is: "<<a[p]<<endl;
-
+void queue::last()
+{
+    cout << "the last element in queue is: " << a[p] << endl;
 }
 
-void queue::dequeue(){
-    if(isEmpty()){
-        cout<<"Queue is empty"<<endl;
+void queue::dequeue()
+{
+    if (isEmpty())
+    {
+        cout << "Queue is empty" << endl;
     }
     y++;
 }
 
-int main(){
+int main()
+{
     queue s(5);
     s.enqueue(1);
     s.enqueue(2);
