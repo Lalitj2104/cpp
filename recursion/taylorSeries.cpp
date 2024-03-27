@@ -17,17 +17,19 @@ double e(int x, int n)
     }
 }
 
-double i(int x,int n){
-    static int  s=1;
-    if(n==0){
+double i(int x, int n)
+{
+    static int s = 1;
+    if (n == 0)
+    {
         return (1);
     }
-    s=1+x/n*s;
-    return (x,n-1);
+    s = 1 + x / n * s;
+    return (x, n - 1);
 }
 int main()
 {
     int a, b;
-    cin>>a>>b;
-    cout<<e(a,b);
+    cin >> a >> b;
+    cout << e(a, b);
 }
