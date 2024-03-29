@@ -4,40 +4,34 @@ using namespace std;
 
 
 
-void printSubsequences(int arr[], int index, vector<int> &subarr,int n,int sum,int s)
+void printSubsequences(int arr[], int index, vector<int> &subarr,int n)
 {
 	
 	if (index == n)
 	{
-        if(s==sum){
 		for (auto it:subarr){
 		cout << it << " ";
 		
 		}
-        cout<<endl;
-        return;
-        }
-	// if(subarr.size()==0)
-	// 	cout<<"{}";
+	if(subarr.size()==0)
+		cout<<"{}";
 	
-	
+	cout<<endl;
 	return;
 
 		
 	}
 	else
 	{
-
+        printSubsequences(arr, index + 1, subarr,n);
 		subarr.push_back(arr[index]);
 	
-     sum+=arr[index];
-		printSubsequences(arr, index + 1, subarr,n,sum,s);
 
-		sum-=arr[index];
+		printSubsequences(arr, index + 1, subarr,n);
+
+		
 		subarr.pop_back();
-        
-
-        printSubsequences(arr, index + 1, subarr,n,sum,s);
+	
 		
 	}
 	
@@ -45,12 +39,12 @@ void printSubsequences(int arr[], int index, vector<int> &subarr,int n,int sum,i
 
 int main()
 {
-	int arr[]={1,2,1 };
+	int arr[]={3,1, 2 };
 	int n=sizeof(arr)/sizeof(arr[0]);
 	vector<int> vec;
-	int sum =2;
+	
 
-	printSubsequences(arr, 0, vec,n,0,sum);
+	printSubsequences(arr, 0, vec,n);
 
 	return 0;
 }
