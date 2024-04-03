@@ -1,5 +1,4 @@
 #include <iostream>
-#include <stdio.h>
 using namespace std;
 class Node
 {
@@ -185,6 +184,6 @@ int main()
     t.Inorder();
     cout << endl
          << endl;
-         
+
     return 0;
-}
+}   
