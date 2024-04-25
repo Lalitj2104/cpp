@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 class Node
 {
@@ -73,6 +73,7 @@ public:
     void Levelorder(Node *p);
     int Height() { return Height(root); }
     int Height(Node *root);
+    void PrintTopView(Node *root);
 };
 void Tree::CreateTree()
 {
@@ -173,6 +174,25 @@ int Tree::Height(struct Node *root)
     else
         return y + 1;
 }
+
+void Tree::PrintTopView(Node *root){
+    if(root==NULL){
+        return;
+    }
+
+    map <int,int> topnode;
+
+    queue <pair<Node *,int>> q;
+    q.push(make_pair(root,0));
+    while(!q.empty()){
+        pair <Node *,int> temp =q.front();
+        q.pop();
+
+        Node * frontNode =temp.first;
+        int hd=temp.second;
+    }
+}
+
 int main()
 {
     Tree t;
