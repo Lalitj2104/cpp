@@ -1,6 +1,4 @@
 //assume that we are making max heap
-
-
 #include<bits/stdc++.h>
 using namespace std;
 
