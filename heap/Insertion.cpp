@@ -13,6 +13,8 @@ void insert(int A[],int n){
     A[i]=temp;
 }
 
+
+
 void createHeap(int A[],int n){
     int i;
     for(int i=2;i<=n;i++){
