@@ -44,7 +44,6 @@ void create(int A[], int n)
     first->prev = last;
 }
 
-
 int main()
 {
     int a[] = {1, 2, 3, 4, 5};
