@@ -6,6 +6,8 @@ class node{
     node * next;
 }*first=NULL;
 
+
+
 void display(node *p){
 
     do{
@@ -34,6 +36,7 @@ void create(int A[],int n){
     }
     t->next=first;
 }
+
 
 int main(){
     int A[]={1,2,3,4,5};
